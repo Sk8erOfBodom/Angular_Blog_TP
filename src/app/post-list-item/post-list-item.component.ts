@@ -11,4 +11,8 @@ export class PostListItemComponent implements OnInit {
 
     constructor() { }
     ngOnInit() { }
+
+    love(number) {
+        this.item.loveIts += number;
+    }
 }

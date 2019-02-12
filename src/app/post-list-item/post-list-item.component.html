@@ -6,7 +6,7 @@
         {{item.content}}
     </p>
     <footer>
-        <button type="button" class='btn btn-success mx-1'>Love It!</button>
-        <button type="button" class='btn btn-danger mx-1'>Hate It!</button>
+        <button type="button" class='btn btn-success mx-1' (click)="love(1)">Love It! <span *ngIf="item.loveIts >= 0" class="badge badge-pill badge-light">{{item.loveIts}}</span></button>
+        <button type="button" class='btn btn-danger mx-1' (click)="love(-1)">Hate It! <span *ngIf="item.loveIts < 0" class="badge badge-pill badge-light">{{item.loveIts}}</span></button>
     </footer>
 </article>
