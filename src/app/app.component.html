@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<main class="w-75 shadow" style="margin: auto;">
-    <header class="jumbotron text-center text-primary">
+<div class="container w-75 mx-auto">
+    <header class="bg-dark jumbotron text-center text-primary shadow">
         <h1>Mon blog très très intéressant</h1>
     </header>
-</main>
+    <main>
+        <app-post-list [list]="postList"></app-post-list>
+    </main>
+</div>
 
 <router-outlet></router-outlet>

@@ -1,3 +1,12 @@
-<p>
-  post-list-item works!
-</p>
+<article [ngClass]="{'list-group-item': true,
+                     'list-group-item-success': item.loveIts > 0,
+                     'list-group-item-danger': item.loveIts < 0}">
+    <h3>{{item.title}} <small class="float-right badge badge-secondary">({{item.createdAt | date : 'le dd/MM/yy à HH:mm' }})</small></h3>
+    <p>
+        {{item.content}}
+    </p>
+    <footer>
+        <button type="button" class='btn btn-success mx-1'>Love It!</button>
+        <button type="button" class='btn btn-danger mx-1'>Hate It!</button>
+    </footer>
+</article>
